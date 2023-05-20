@@ -1,0 +1,9 @@
+body{
+  background-image: url("https://images.pexels.com/photos/11123025/pexels-photo-11123025.jpeg?auto=compress&cs=tinysrgb&w=600");
+  background-size: cover;
+  margin: 0px;
+}
+table,th,tr,td{
+  border:"1px solid";
+
+}
