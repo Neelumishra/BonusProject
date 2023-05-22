@@ -5,13 +5,16 @@ import { useSelector } from 'react-redux';
 import { todolist } from '../store';
 
 export default function Home() {
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
   const list = useSelector((state) => state.Todo);
 
   console.log('Home', list);
 
   function handleDelete() {
-    dispatch(todolist.actions.onDelete());
+    const confirmDelete = window.confirm('Warning: This action will clear the list. Are you sure you want to proceed?');
+    if (confirmDelete) {
+      dispatch(todolist.actions.onDelete());
+    }
   }
 
   return (
