@@ -1,4 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+
 export const todolist = createSlice({
   initialState: JSON.parse(localStorage.getItem("list"))||[],
   name: "Todo",
